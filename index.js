@@ -1,6 +1,6 @@
 /* global window, module */
 
-;(function (global, factory) {
+; (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
         typeof define === 'function' && define.amd ? define(factory) :
             global.Router = factory()
@@ -408,7 +408,7 @@
      *
      */
     Router.prototype._treatAsync = function () {
-        var result;
+        let result;
 
         result = this._currentPage.options.unloadCb(this._currentPage, true);
         if (!(result instanceof Promise)) {
